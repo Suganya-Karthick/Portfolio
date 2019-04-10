@@ -1,10 +1,36 @@
-<% if current_user %>
-  Logged in as <%= current_user.email %>.
-  <%= link_to "Log Out", logout_path %>
-<% else %>
-  <%= link_to "Sign Up", signup_path %> or
-  <%= link_to "Log In", login_path %>
-<% end %>
-<p id="notice"><%= notice %></p>
-<h1>Example</h1>
-<p>Lorem ipsum …</p>
+<div class='row no-gutters'>
+  <div class='col-xl-4'>
+    <div class='leftside'>
+      <div class="logo">
+        <%= image_tag("logo.jpg", :class => "mx-auto d-block") do %>
+        Test
+        <% end %>
+      </div>
+      <div class="form">
+        <div class="card-text">
+          <span class="login-title">WELCOME BACK</span>
+        </div>
+        <span class="card-text description">Please login to your account</span>
+        <%= form_for(:session, url: login_path) do |f| %>
+
+          <%= f.label 'Mobile Number or Email', class: 'red-label' %>
+          <%= f.email_field :email, class: 'line-field' %>
+
+          <%= f.label :password, class: 'red-label' %>
+          <%= f.password_field :password, class: 'line-field' %>
+
+          <%= link_to "Forgot your password?", login_path, class: 'forgot-password-link' %>
+
+          <%= f.submit "Login", class: "login-button" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-8">
+    <div class='rightside'>
+      <%= image_tag("landing_banner_1.jpg") do %>
+        Test
+      <% end %>
+    </div>
+  </div>
+</div>
