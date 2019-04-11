@@ -24,13 +24,44 @@
           <%= f.submit "Login", class: "login-button one-edge-shadow" %>
         <% end %>
       </div>
+      <div class="floating-button">
+        suganya
+      </div>
     </div>
   </div>
   <div class="col-xl-8">
     <div class='rightside'>
-      <%= image_tag("landing_banner_1.jpg") do %>
-        Test
-      <% end %>
+      <div class="carousel-div">
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <%= image_tag("landing_banner_1.jpg", width: "500", height: "440") do %>
+              Test
+            <% end %>
+          </div>
+          <div class="carousel-item">
+            <%= image_tag("landing_banner_1.jpg", width: "500", height: "440") do %>
+              Test
+            <% end %>
+          </div>
+          <div class="carousel-item">
+            <%= image_tag("landing_banner_1.jpg", width: "500", height: "440") do %>
+              Test
+            <% end %>
+          </div>
+        </div>
+
+      </div>
+      </div>
     </div>
   </div>
 </div>
